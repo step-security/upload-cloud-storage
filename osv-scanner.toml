@@ -1,0 +1,7 @@
+[[IgnoredVulns]]
+id = "GHSA-w5hq-g745-h8pq"
+reason = "Non-exploitable: vuln is in uuid v3/v5/v6 bounds checks. Transitive consumers (@google-cloud/storage, gaxios, teeny-request) only call uuid.v4(). Vulnerable code paths never execute."
+
+[[IgnoredVulns]]
+id = "GHSA-vpq2-c234-7xj6"
+reason = "Non-exploitable: vuln requires AbortSignal passed to @tootallnate/once. The only call site (http-proxy-agent agent.js: once(socket, 'connect')) passes no signal, so the abort-hang branch is unreachable."
